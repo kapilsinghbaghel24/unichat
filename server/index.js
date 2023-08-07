@@ -22,7 +22,7 @@ const server = app.listen(process.env.PORT, () => console.log(`Server started on
 
 const io = new Server(server, {
     cors: {
-        origin: "http://localhost:5173"
+        origin: `${process.env.FRONT_END_URL}`
     }
 });
 
